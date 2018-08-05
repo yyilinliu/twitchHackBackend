@@ -1,0 +1,27 @@
+{
+  "name": "twitch-hack-backend",
+  "version": "1.0.0",
+  "description": "App designed for music festival goers that uses twitch api and google maps api",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyilinliu/twitchHackBackend.git"
+  },
+  "keywords": [
+    "music",
+    "festival",
+    "express-app",
+    "twitchapi",
+    "googleapi",
+    "live-streaming"
+  ],
+  "author": "Nicole Li, Yilin Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yyilinliu/twitchHackBackend/issues"
+  },
+  "homepage": "https://github.com/yyilinliu/twitchHackBackend#readme"
+}
