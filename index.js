@@ -31,8 +31,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // .catch(err => console.log(err))
 
 app.post('/videoAndArtist', (req, res) => {
+  console.log('LOCATION', req.body.location);
   Stage.findOne({location: req.body.location}, (err, stage) => {
     if (err) console.log(err);
+    console.log('STAGE FOUND', stage);
     axios.get('http://api.7digital.com/1.2/artist/search', {
       params: {
         shopId: process.env.SHOPID,
@@ -63,7 +65,7 @@ app.post('/videoAndArtist', (req, res) => {
       })
       .then(response => {
         console.log('TRACKS', response.data.tracks.track.slice(0,2))
-        var topThree = response.data.tracks.track.slice(0,2);
+        var topThree = response.data.tracks.track.slice(0,3);
         var allData = {
           artist: stage.artist,
           url: stage.url,
